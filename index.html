@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パーソナルジム Make &amp; Space | 人生最後のダイエット。3ヶ月で、今の自分が一番好きになる。</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* ── NEW PREMIUM PALETTE ── */
+      --rose:      #A8294C;   /* deep rose: primary */
+      --rose-lt:   #E8516F;   /* bright rose: hover / accent */
+      --rose-pale: #FDF0F3;   /* blush: section bg */
+      --gold:      #B8873A;   /* antique gold: premium accent */
+      --gold-lt:   #E8C87A;   /* light gold: highlight */
+      --cream:     #FDFAF7;   /* warm cream: main bg */
+      --ivory:     #F5EFE8;   /* ivory: alt section bg */
+      --dark:      #1C1012;   /* warm black: headings */
+      --muted:     #6B5458;   /* warm gray: body text */
+      --line-grn:  #06C755;
+
+      --font-min:  'Shippori Mincho', serif;
+      --font-sans: 'Noto Sans JP', sans-serif;
+      --font-en:   'Cormorant Garamond', serif;
+
+      --radius:    12px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 4px 16px rgba(28,16,18,.08);
+      --shadow-md: 0 8px 32px rgba(168,41,76,.12);
+      --shadow-lg: 0 20px 60px rgba(168,41,76,.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--dark);
+      background: var(--cream);
+      overflow-x: hidden;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ════════════════════════════════════════════
+       GLAMOROUS LP — PREMIUM DESIGN SYSTEM 2025
+       ════════════════════════════════════════════ */
+
+    /* ─── UTILITY ─── */
+    .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gold); font-size: .78rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .section-label::before,
+    .section-label::after {
+      content: ''; display: block; width: 28px; height: 1px;
+      background: var(--gold);
+    }
+    .section-title {
+      font-family: var(--font-min);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--dark);
+      text-align: center;
+      margin-bottom: 16px;
+      letter-spacing: .04em;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      font-size: .96rem;
+      margin-bottom: 56px;
+      line-height: 2;
+    }
+    .sec-head { text-align: center; margin-bottom: 56px; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: linear-gradient(135deg, var(--rose-lt) 0%, var(--rose) 100%);
+      color: #fff; font-size: 1rem; font-weight: 700;
+      padding: 17px 44px; border-radius: 99px; text-decoration: none;
+      box-shadow: 0 8px 28px rgba(168,41,76,.35);
+      transition: transform .22s, box-shadow .22s;
+      cursor: pointer; border: none; letter-spacing: .04em;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(168,41,76,.45); }
+
+    .btn-line {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--line-grn); color: #fff;
+      font-size: 1rem; font-weight: 700; padding: 17px 44px;
+      border-radius: 99px; text-decoration: none;
+      box-shadow: 0 8px 24px rgba(6,199,85,.3);
+      transition: transform .22s, box-shadow .22s;
+    }
+    .btn-line:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(6,199,85,.42); }
+
+    /* ─── URGENCY BAR ─── */
+    .urgency-bar {
+      background: linear-gradient(90deg, var(--rose) 0%, #7A1830 100%);
+      color: #fff; text-align: center;
+      padding: 10px 20px; font-size: .84rem; font-weight: 700;
+      letter-spacing: .06em; position: relative; z-index: 101;
+    }
+    .urgency-bar strong { color: var(--gold-lt); }
+
+    /* ─── HEADER ─── */
+    header {
+      position: sticky; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(253,250,247,.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(184,135,58,.18);
+      padding: 13px 0;
+      box-shadow: 0 2px 12px rgba(28,16,18,.06);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { text-decoration: none; display: inline-flex; align-items: center; }
+    .logo-img { height: 44px; width: auto; display: block; }
+    .footer-logo { text-decoration: none; display: inline-flex; align-items: center; }
+    .footer-logo-img { height: 40px; width: auto; filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(300deg); opacity: .85; }
+    nav { display: flex; gap: 26px; }
+    nav a {
+      font-size: .83rem; font-weight: 500; color: var(--muted);
+      text-decoration: none; transition: color .2s; letter-spacing: .04em;
+    }
+    nav a:hover { color: var(--rose); }
+    .header-cta .btn-primary { padding: 10px 22px; font-size: .84rem; }
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .header-cta .btn-primary { padding: 9px 16px; font-size: .8rem; }
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      background: linear-gradient(160deg, #FDF5EE 0%, var(--rose-pale) 60%, #F8EAF5 100%);
+      padding-top: 72px; padding-bottom: 80px;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: ''; position: absolute;
+      top: -160px; right: -160px;
+      width: 640px; height: 640px;
+      background: radial-gradient(circle, rgba(184,135,58,.1) 0%, transparent 65%);
+      border-radius: 50%;
+    }
+    .hero-banner-wrap {
+      width: 100%; background: #fff;
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-md); margin-bottom: 52px;
+    }
+    .hero-banner-wrap img { width: 100%; height: auto; display: block; }
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 56px; align-items: center; position: relative; z-index: 1;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: linear-gradient(135deg, var(--rose), var(--rose-lt));
+      color: #fff; font-size: .75rem; font-weight: 700;
+      padding: 6px 16px; border-radius: 99px;
+      margin-bottom: 22px; letter-spacing: .1em;
+    }
+    .hero-title {
+      font-family: var(--font-min);
+      font-size: clamp(1.75rem, 3.8vw, 2.8rem);
+      font-weight: 700; line-height: 1.45;
+      color: var(--dark); margin-bottom: 22px;
+      letter-spacing: .04em;
+    }
+    .hero-title em {
+      font-style: normal; color: var(--rose);
+      background: linear-gradient(transparent 70%, rgba(168,41,76,.15) 70%);
+    }
+    .hero-desc {
+      color: var(--muted); line-height: 2;
+      font-size: .97rem; margin-bottom: 32px;
+    }
+    .hero-actions { display: flex; flex-direction: column; gap: 13px; align-items: flex-start; }
+    .hero-note { font-size: .76rem; color: var(--muted); }
+    .hero-stats {
+      display: flex; gap: 0;
+      margin-top: 40px;
+      border: 1px solid rgba(184,135,58,.25);
+      border-radius: var(--radius); overflow: hidden;
+      background: #fff;
+    }
+    .stat-item {
+      flex: 1; padding: 16px 12px; text-align: center;
+      border-right: 1px solid rgba(184,135,58,.2);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--font-min);
+      font-size: 1.8rem; font-weight: 700;
+      color: var(--rose); line-height: 1;
+    }
+    .stat-num span { font-size: .9rem; font-family: var(--font-sans); }
+    .stat-label { font-size: .7rem; color: var(--muted); margin-top: 4px; letter-spacing: .04em; }
+    .hero-image { position: relative; display: flex; justify-content: center; align-items: center; }
+    .hero-photo {
+      width: 100%; max-width: 400px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg); display: block;
+    }
+    .floating-tag {
+      position: absolute; background: #fff;
+      border-radius: var(--radius); padding: 9px 14px;
+      font-size: .78rem; font-weight: 700;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+    }
+    .floating-tag.top-left { top: -8px; left: -16px; color: var(--rose); border-left: 3px solid var(--rose); }
+    .floating-tag.bottom-right { bottom: -8px; right: -16px; color: var(--gold); border-left: 3px solid var(--gold); }
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-image { order: -1; }
+      .hero-stats { flex-wrap: wrap; }
+      .stat-item { min-width: 50%; }
+    }
+
+    /* ─── DIVIDER ─── */
+    .gold-divider {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; padding: 40px 0;
+    }
+    .gold-divider::before, .gold-divider::after {
+      content: ''; flex: 1; max-width: 160px;
+      height: 1px; background: linear-gradient(90deg, transparent, var(--gold-lt));
+    }
+    .gold-divider::after { background: linear-gradient(90deg, var(--gold-lt), transparent); }
+    .gold-divider span { color: var(--gold); font-size: 1.1rem; }
+
+    /* ─── PROBLEM ─── */
+    #problem { padding: 96px 0; background: var(--dark); color: #fff; }
+    #problem .section-title { color: #fff; }
+    #problem .section-sub { color: rgba(255,255,255,.55); margin-bottom: 52px; }
+    #problem .section-label { color: var(--gold-lt); }
+    #problem .section-label::before,
+    #problem .section-label::after { background: var(--gold-lt); }
+    .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .problem-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius); padding: 28px 22px;
+      transition: background .25s, border-color .25s, transform .25s;
+    }
+    .problem-card:hover {
+      background: rgba(168,41,76,.15);
+      border-color: rgba(168,41,76,.5);
+      transform: translateY(-4px);
+    }
+    .problem-icon { font-size: 1.9rem; margin-bottom: 14px; }
+    .problem-text { font-size: .93rem; line-height: 1.8; color: rgba(255,255,255,.82); }
+    .problem-cta { text-align: center; margin-top: 52px; }
+    .problem-cta p { color: rgba(255,255,255,.65); margin-bottom: 20px; font-size: .95rem; }
+    @media (max-width: 768px) { .problem-grid { grid-template-columns: 1fr; } }
+
+    /* ─── FEATURES ─── */
+    #features { padding: 96px 0; background: var(--cream); }
+    .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .feature-card {
+      background: #fff; border-radius: var(--radius-lg);
+      padding: 40px 28px 36px; text-align: center;
+      box-shadow: var(--shadow-sm);
+      border-top: 3px solid transparent;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+    }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--rose);
+      box-shadow: var(--shadow-md);
+    }
+    .feature-num {
+      font-family: var(--font-en);
+      font-size: 4rem; font-weight: 600; font-style: italic;
+      color: rgba(168,41,76,.12); line-height: 1; margin-bottom: 4px;
+    }
+    .feature-icon {
+      width: 68px; height: 68px;
+      background: var(--rose-pale); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.9rem; margin: 0 auto 20px;
+    }
+    .feature-title {
+      font-family: var(--font-min);
+      font-size: 1.1rem; font-weight: 700;
+      margin-bottom: 14px; color: var(--dark);
+      line-height: 1.5;
+    }
+    .feature-desc { font-size: .88rem; color: var(--muted); line-height: 1.9; }
+    @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } }
+
+    /* ─── PROGRAM ─── */
+    #program { padding: 96px 0; background: var(--ivory); }
+    .program-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .program-main-card {
+      background: #fff; border-radius: var(--radius-lg);
+      padding: 40px; box-shadow: var(--shadow-sm);
+    }
+    .program-main-card h3 {
+      font-family: var(--font-min);
+      font-size: 1.15rem; font-weight: 700;
+      margin-bottom: 28px; color: var(--dark);
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(184,135,58,.2);
+    }
+    .step-list { display: flex; flex-direction: column; gap: 20px; }
+    .step-item { display: flex; gap: 14px; align-items: flex-start; }
+    .step-dot {
+      width: 34px; height: 34px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--rose-lt), var(--rose));
+      border-radius: 50%; color: #fff;
+      font-size: .82rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(168,41,76,.3);
+    }
+    .step-content strong { display: block; font-size: .93rem; font-weight: 700; margin-bottom: 4px; color: var(--dark); }
+    .step-content span { font-size: .82rem; color: var(--muted); line-height: 1.7; }
+    .program-content h2 {
+      font-family: var(--font-min);
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 700; line-height: 1.5;
+      margin-bottom: 20px; color: var(--dark);
+    }
+    .program-content p { color: var(--muted); line-height: 2; margin-bottom: 28px; font-size: .95rem; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 13px; margin-bottom: 36px; }
+    .check-list li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; }
+    .check-list li::before {
+      content: '✦'; color: var(--gold);
+      font-size: .75rem; flex-shrink: 0; margin-top: 3px;
+    }
+    @media (max-width: 768px) { .program-inner { grid-template-columns: 1fr; } }
+
+    /* ─── RESULTS ─── */
+    #results { padding: 96px 0; background: var(--rose-pale); }
+    #results .section-title { color: var(--dark); }
+    .ba-real-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-bottom: 56px; }
+    @media (max-width: 768px) { .ba-real-grid { grid-template-columns: 1fr; } }
+    .before-after-card {
+      background: #fff; border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm); overflow: hidden;
+    }
+    .before-after-labels { display: grid; grid-template-columns: 1fr 1fr; }
+    .before-after-labels span {
+      text-align: center; padding: 11px;
+      font-size: .78rem; font-weight: 700; letter-spacing: .12em;
+    }
+    .before-after-labels .lbl-before {
+      background: #F0EDED; color: var(--muted);
+      border-right: 1px solid #E8E0E0;
+    }
+    .before-after-labels .lbl-after { background: var(--rose); color: #fff; }
+    .before-after-card img { width: 100%; display: block; }
+    .before-after-meta {
+      padding: 14px 18px; text-align: center;
+      font-size: .88rem; font-weight: 700; color: var(--rose);
+      border-top: 1px solid var(--rose-pale);
+    }
+    .before-after-meta span { color: var(--muted); font-weight: 400; font-size: .8rem; margin-left: 6px; }
+    .voice-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .voice-card {
+      background: #fff; border-radius: var(--radius-lg);
+      padding: 28px; box-shadow: var(--shadow-sm);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .voice-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .voice-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .voice-avatar {
+      width: 50px; height: 50px; border-radius: 50%;
+      background: var(--rose-pale);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; flex-shrink: 0;
+    }
+    .voice-name { font-size: .9rem; font-weight: 700; color: var(--dark); }
+    .voice-meta { font-size: .74rem; color: var(--muted); margin-top: 2px; }
+    .voice-result {
+      background: linear-gradient(135deg, var(--rose), #7A1830);
+      border-radius: 8px; padding: 10px 16px;
+      font-size: .88rem; font-weight: 700; color: #fff;
+      margin-bottom: 16px; text-align: center; letter-spacing: .04em;
+    }
+    .voice-text { font-size: .87rem; color: var(--muted); line-height: 1.9; }
+    .stars { color: var(--gold); font-size: .95rem; margin-bottom: 10px; letter-spacing: .1em; }
+    @media (max-width: 768px) { .voice-grid { grid-template-columns: 1fr; } }
+
+    /* ─── FLOW ─── */
+    #flow { padding: 96px 0; background: var(--cream); }
+    .flow-steps {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 0; position: relative; margin-top: 56px;
+    }
+    .flow-steps::before {
+      content: ''; position: absolute;
+      top: 34px; left: 12.5%; width: 75%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-lt), var(--gold), var(--gold-lt), transparent);
+      z-index: 0;
+    }
+    .flow-step { text-align: center; position: relative; z-index: 1; padding: 0 10px; }
+    .flow-circle {
+      width: 68px; height: 68px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--rose-lt), var(--rose));
+      color: #fff; font-family: var(--font-min);
+      font-size: 1.5rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 6px 20px rgba(168,41,76,.3);
+    }
+    .flow-title { font-size: .91rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .flow-desc { font-size: .78rem; color: var(--muted); line-height: 1.8; }
+    @media (max-width: 768px) {
+      .flow-steps { grid-template-columns: repeat(2,1fr); gap: 32px; }
+      .flow-steps::before { display: none; }
+    }
+
+    /* ─── PRICE ─── */
+    #price { padding: 96px 0; background: var(--ivory); }
+    .price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; align-items: start; }
+    .price-card {
+      background: #fff; border-radius: var(--radius-lg);
+      padding: 36px 26px; box-shadow: var(--shadow-sm);
+      text-align: center; position: relative;
+      border: 1.5px solid transparent;
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .price-card:hover { border-color: rgba(168,41,76,.2); box-shadow: var(--shadow-md); }
+    .price-card.featured {
+      background: linear-gradient(155deg, var(--rose) 0%, #6E1228 100%);
+      color: #fff; transform: scale(1.04); border-color: transparent;
+    }
+    .price-label {
+      position: absolute; top: -13px; left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--gold), #9A6A20);
+      color: #fff; font-size: .7rem; font-weight: 700;
+      padding: 5px 20px; border-radius: 99px;
+      white-space: nowrap; letter-spacing: .1em;
+    }
+    .price-plan { font-family: var(--font-en); font-style: italic; font-size: .9rem; opacity: .6; margin-bottom: 6px; letter-spacing: .08em; }
+    .price-name { font-family: var(--font-min); font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; }
+    .price-amount { font-family: var(--font-min); font-size: 2.4rem; font-weight: 700; line-height: 1; margin-bottom: 4px; }
+    .price-amount span { font-family: var(--font-sans); font-size: .9rem; font-weight: 400; }
+    .price-period { font-size: .78rem; opacity: .65; margin-bottom: 24px; }
+    .price-features { list-style: none; text-align: left; margin-bottom: 28px; display: flex; flex-direction: column; gap: 10px; }
+    .price-features li { font-size: .87rem; display: flex; gap: 8px; align-items: flex-start; }
+    .price-features li::before { content: '✦'; font-size: .7rem; flex-shrink: 0; margin-top: 3px; }
+    .price-card:not(.featured) .price-features li::before { color: var(--gold); }
+    .price-card.featured .price-features li::before { color: var(--gold-lt); }
+    .price-btn {
+      display: block; font-weight: 700; font-size: .93rem;
+      padding: 14px; border-radius: 99px;
+      text-decoration: none; transition: opacity .2s, transform .2s;
+    }
+    .price-btn:hover { opacity: .85; transform: translateY(-1px); }
+    .price-card.featured .price-btn { background: #fff; color: var(--rose); }
+    .price-card:not(.featured) .price-btn {
+      background: linear-gradient(135deg, var(--rose-lt), var(--rose));
+      color: #fff; box-shadow: 0 6px 20px rgba(168,41,76,.3);
+    }
+    .price-note { text-align: center; margin-top: 32px; font-size: .82rem; color: var(--muted); line-height: 1.9; }
+    @media (max-width: 768px) {
+      .price-grid { grid-template-columns: 1fr; }
+      .price-card.featured { transform: none; }
+    }
+
+    /* ─── FAQ ─── */
+    #faq { padding: 96px 0; background: var(--cream); }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 740px; margin: 0 auto; }
+    .faq-item {
+      border: 1.5px solid rgba(184,135,58,.2);
+      border-radius: var(--radius); overflow: hidden;
+      background: #fff;
+    }
+    .faq-q {
+      width: 100%; background: transparent; border: none;
+      padding: 20px 24px; display: flex;
+      justify-content: space-between; align-items: center;
+      font-size: .96rem; font-weight: 700; cursor: pointer;
+      text-align: left; color: var(--dark);
+      font-family: var(--font-sans); gap: 12px;
+    }
+    .faq-q .icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: var(--rose-pale); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--rose); font-size: 1rem; font-weight: 900;
+      transition: transform .3s, background .3s;
+    }
+    .faq-item.open .faq-q .icon { transform: rotate(45deg); background: var(--rose); color: #fff; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-item.open .faq-a { max-height: 320px; }
+    .faq-a-inner {
+      padding: 4px 24px 22px;
+      font-size: .9rem; color: var(--muted); line-height: 1.9;
+      border-top: 1px solid rgba(184,135,58,.12);
+    }
+
+    /* ─── CTA ─── */
+    #cta {
+      padding: 100px 0;
+      background:
+        linear-gradient(135deg, rgba(28,16,18,.84) 0%, rgba(110,18,40,.88) 100%),
+        url('image/cta_bg.jpg') center/cover no-repeat;
+      color: #fff; text-align: center; position: relative; overflow: hidden;
+    }
+    #cta::before {
+      content: ''; position: absolute;
+      top: -80px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(184,135,58,.15) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+    #cta .section-title { color: #fff; position: relative; }
+    #cta .section-sub { color: rgba(255,255,255,.6); position: relative; }
+    #cta .section-label { color: var(--gold-lt); }
+    #cta .section-label::before, #cta .section-label::after { background: var(--gold-lt); }
+    .cta-campaign {
+      display: inline-block;
+      border: 1px solid rgba(184,135,58,.45);
+      border-radius: var(--radius);
+      padding: 16px 36px; margin-bottom: 44px;
+      font-size: .94rem; color: rgba(255,255,255,.9);
+      background: rgba(184,135,58,.1); position: relative;
+    }
+    .cta-campaign strong { color: var(--gold-lt); font-size: 1.15rem; }
+    .cta-actions { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; position: relative; }
+
+    /* ─── FOOTER ─── */
+    footer { background: #130A0D; color: rgba(255,255,255,.45); padding: 56px 0 30px; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
+    .footer-logo { font-family: var(--font-en); font-style: italic; font-size: 1.4rem; font-weight: 600; color: var(--rose-lt); text-decoration: none; }
+    .footer-desc { font-size: .84rem; line-height: 1.9; margin-top: 14px; }
+    .footer-col h4 { color: rgba(255,255,255,.8); font-size: .85rem; font-weight: 700; margin-bottom: 16px; letter-spacing: .08em; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { color: rgba(255,255,255,.45); text-decoration: none; font-size: .82rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--rose-lt); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 24px; text-align: center; font-size: .76rem; }
+    @media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* ─── FLOAT LINE ─── */
+    .float-line {
+      position: fixed; bottom: 24px; right: 20px; z-index: 200;
+      background: var(--line-grn); color: #fff;
+      border-radius: 99px; padding: 13px 20px;
+      display: flex; align-items: center; gap: 8px;
+      font-size: .86rem; font-weight: 700; text-decoration: none;
+      box-shadow: 0 6px 22px rgba(6,199,85,.4);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .float-line:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(6,199,85,.5); }
+    .float-line-icon { font-size: 1.3rem; }
+
+    /* ─── REVEAL ─── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  <strong>【4月限定】</strong> 初回カウンセリング完全無料 ＋ 耳ツボ体験あり ／ <strong>今月残席 あとわずか</strong>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <a href="#hero" class="logo">
+      <img src="image/logo.svg" alt="パーソナルジム Make &amp; Space" class="logo-img">
+    </a>
+    <nav>
+      <a href="#problem">お悩み</a>
+      <a href="#features">3大特徴</a>
+      <a href="#results">お客様の声</a>
+      <a href="#price">料金</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#cta" class="btn-primary">無料カウンセリング予約</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+
+    <!-- トップバナー画像（文字入り） -->
+    <div class="hero-banner-wrap">
+      <img src="image/Gemini_Generated_Image_d2qhp5d2qhp5d2qh.png" alt="ダイエット＝キツいそんなイメージ、ありませんか？">
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">✦ 佐賀発・女性専用 結果コミット型ダイエット</div>
+        <h1 class="hero-title">
+          人生最後のダイエット。<br>
+          <em>3ヶ月で、今の自分が<br>一番好きになる。</em>
+        </h1>
+        <p class="hero-desc">
+          運動なし・3食しっかり食べながら健康的に痩せる。<br>
+          独自の「耳ツボ×LUMINAGLOWメソッド」で<br>
+          リバウンドの連鎖を、一生断ち切ります。
+        </p>
+        <div class="hero-actions">
+          <a href="#cta" class="btn-primary">
+            <span>🌸</span> 無料カウンセリングを予約する
+          </a>
+          <a href="#cta" class="btn-line">
+            <span>💬</span> LINEで無料相談する
+          </a>
+          <p class="hero-note">※ 初回カウンセリング完全無料 ／ 佐賀県・福岡・長崎からお越しいただけます</p>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">-8〜10<span>kg</span></div>
+            <div class="stat-label">3ヶ月平均減量</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">3<span>食</span></div>
+            <div class="stat-label">食べながら痩せる</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">0<span>円</span></div>
+            <div class="stat-label">初回カウンセリング</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="floating-tag top-left">🏆 佐賀No.1 結果コミット</div>
+        <img src="image/hero_main.jpg" alt="GLAMOROUSダイエット" class="hero-photo">
+        <div class="floating-tag bottom-right">✨ 運動なし・食べながら-10kg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider container"><span>✦</span></div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <div class="sec-head">
+      <div class="section-label">こんなお悩みありませんか？</div>
+      <h2 class="section-title">もう、一人で悩まないでください。</h2>
+      <p class="section-sub">30〜50代女性が抱えるダイエットの壁、すべてに向き合います。</p>
+    </div>
+    <div class="problem-grid reveal">
+      <div class="problem-card">
+        <div class="problem-icon">🔄</div>
+        <div class="problem-text">ダイエットのたびにリバウンド。「また繰り返すかも」と諦めかけている</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">👶</div>
+        <div class="problem-text">産後に増えた体重が何年も戻らない。以前と同じ方法が全く効かない</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🌡️</div>
+        <div class="problem-text">更年期以降、代謝がガクッと落ちて、食べていないのに太っていく</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🍽️</div>
+        <div class="problem-text">食べることが好きで、食事制限が長続きしない。ストレスで食べ過ぎてしまう</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">💸</div>
+        <div class="problem-text">安いジムや市販の教材を試し続けても結果が出ず、お金と時間だけが消えた</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🙋</div>
+        <div class="problem-text">「これで最後にしたい」。本気で変わりたいのに、何を信じればいいかわからない</div>
+      </div>
+    </div>
+    <div class="problem-cta">
+      <p>そのお悩み、GLAMOROUSダイエットが解決します</p>
+      <a href="#features" class="btn-primary">3大特徴を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="sec-head">
+      <div class="section-label">GLAMOROUSダイエット 3大特徴</div>
+      <h2 class="section-title">なぜ、他で失敗した人が<br>ここで結果を出せるのか？</h2>
+      <p class="section-sub">オンラインでは絶対に真似できない、対面だけの本気メソッドがあります。</p>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <div class="feature-icon">👂</div>
+        <div class="feature-title">「耳ツボ」×<br>LUMINAGLOWメソッド</div>
+        <div class="feature-desc">ミリ単位の調整が必要な耳ツボ施術で食欲を自然にコントロール。あなたのバイオリズムに合わせた高精度な対面指導は、オンラインでは絶対に不可能。佐賀に来てこそ叶う、唯一無二のアプローチです。</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <div class="feature-icon">🥗</div>
+        <div class="feature-title">3食バランス食 ＋<br>独自サプリメント</div>
+        <div class="feature-desc">「食べないダイエット」はもう卒業。独自のプロテイン・サプリで栄養をしっかり補いながら代謝を落とさず、健康的に-10kgを目指します。食べることが好きな方こそ向いているプログラムです。</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">03</div>
+        <div class="feature-icon">📖</div>
+        <div class="feature-title">一生モノの<br>「リバウンド防止知識」</div>
+        <div class="feature-desc">プログラム終了後も自分で体型を維持できる食事の知識を完全伝授。体重を落とすだけでなく「もう二度と太らない習慣」を3ヶ月かけて身につけます。これが人生最後のダイエットになる理由です。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM DETAIL -->
+<section id="program">
+  <div class="container">
+    <div class="program-inner">
+      <div class="program-visual reveal">
+        <div class="program-main-card">
+          <h3>📋 3ヶ月プログラムの流れ</h3>
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <strong>無料カウンセリング（対面 / 佐賀）</strong>
+                <span>現在の体質・生活習慣・食の好みを丁寧にヒアリング。耳ツボの体験もできます。</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <strong>あなた専用プランの設計</strong>
+                <span>耳ツボ施術の計画 ＋ 3食食事プラン ＋ 独自サプリを組み合わせた完全オーダーメイドプランを作成。</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <strong>定期来店 ＆ LINEサポート</strong>
+                <span>定期的な耳ツボ施術調整 ＋ 毎日のLINEで食事・体重を記録。バイオリズムに合わせてプランを最適化。</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">4</div>
+              <div class="step-content">
+                <strong>卒業 ＆ 自走サポート</strong>
+                <span>プログラム終了後も、一生モノの食事知識でリバウンドしない体を自分で維持できるようになります。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-content reveal">
+        <div class="section-label">プログラム詳細</div>
+        <h2>運動なし・食べながら。<br>それでも-10kgが叶う理由。</h2>
+        <p>多くのダイエットが失敗する根本原因は「食欲のコントロール不足」と「代謝の低下」。GLAMOROUSは耳ツボで食欲を整え、3食の食事習慣で代謝を上げる。この2軸を対面で丁寧に指導するから、結果が出ます。</p>
+        <ul class="check-list">
+          <li>耳ツボ施術によるバイオリズムに合わせた食欲コントロール</li>
+          <li>3食しっかり食べる独自の食事プログラム</li>
+          <li>独自プロテイン・サプリで栄養不足ゼロ</li>
+          <li>産後太り・更年期太りに特化した対応</li>
+          <li>佐賀対面 × LINEサポートの二重フォロー体制</li>
+          <li>卒業後も自走できる「リバウンド防止知識」を伝授</li>
+        </ul>
+        <a href="#cta" class="btn-primary">無料カウンセリングを予約する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="container">
+    <div class="sec-head">
+      <div class="section-label">お客様の声</div>
+      <h2 class="section-title">「これで最後にしたい」が、<br>本当に最後になりました。</h2>
+      <p class="section-sub">佐賀・福岡・長崎から通ってくださった方々のリアルな変化です。</p>
+    </div>
+
+    <!-- ビフォーアフター写真 3枚グリッド -->
+    <div class="ba-real-grid reveal">
+      <div class="before-after-card">
+        <div class="before-after-labels">
+          <span class="lbl-before">BEFORE</span>
+          <span class="lbl-after">AFTER</span>
+        </div>
+        <img src="image/LINE_ALBUM_ビフォーアフター_260412_1.jpg" alt="ビフォーアフター（横）">
+        <div class="before-after-meta">
+          3ヶ月で -9kg ／ ウエスト -12cm
+          <span>（30代・産後コース）</span>
+        </div>
+      </div>
+      <div class="before-after-card">
+        <div class="before-after-labels">
+          <span class="lbl-before">BEFORE</span>
+          <span class="lbl-after">AFTER</span>
+        </div>
+        <img src="image/LINE_ALBUM_ビフォーアフター_260412_8.jpg" alt="ビフォーアフター（正面）">
+        <div class="before-after-meta">
+          2ヶ月で -7kg ／ 体脂肪率 -9%
+          <span>（20代・代謝改善コース）</span>
+        </div>
+      </div>
+      <div class="before-after-card">
+        <div class="before-after-labels">
+          <span class="lbl-before">BEFORE</span>
+          <span class="lbl-after">AFTER</span>
+        </div>
+        <img src="image/LINE_ALBUM_ビフォーアフター_260412_5.jpg" alt="ビフォーアフター（横2）">
+        <div class="before-after-meta">
+          3ヶ月で -11kg ／ ウエスト -14cm
+          <span>（40代・更年期ケアコース）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="voice-grid reveal">
+      <div class="voice-card">
+        <div class="stars">★★★★★</div>
+        <div class="voice-header">
+          <div class="voice-avatar">👩</div>
+          <div>
+            <div class="voice-name">K.Mさん（36歳・佐賀市在住）</div>
+            <div class="voice-meta">産後ダイエット ／ 3ヶ月コース</div>
+          </div>
+        </div>
+        <div class="voice-result">3ヶ月で -10kg ／ ウエスト -13cm</div>
+        <div class="voice-text">産後3年、どんなダイエットをしても戻らなかった体が、3ヶ月でここまで変わるとは思っていませんでした。耳ツボのおかげで不思議と食欲が落ち着いて、食べながら自然と痩せていった感じです。</div>
+      </div>
+      <div class="voice-card">
+        <div class="stars">★★★★★</div>
+        <div class="voice-header">
+          <div class="voice-avatar">👩‍💼</div>
+          <div>
+            <div class="voice-name">T.Aさん（43歳・福岡から通院）</div>
+            <div class="voice-meta">更年期ケア ／ 3ヶ月コース</div>
+          </div>
+        </div>
+        <div class="voice-result">3ヶ月で -9kg ／ 体脂肪率 -8%</div>
+        <div class="voice-text">福岡から佐賀まで通う価値が十分ありました。更年期で代謝が落ちきっていたのに、食事を減らさず逆に栄養をしっかり摂ることで体が変わっていきました。先生の知識の深さに毎回驚かされます。</div>
+      </div>
+      <div class="voice-card">
+        <div class="stars">★★★★★</div>
+        <div class="voice-header">
+          <div class="voice-avatar">🧑‍🦱</div>
+          <div>
+            <div class="voice-name">Y.Sさん（49歳・長崎から通院）</div>
+            <div class="voice-meta">リバウンド卒業コース ／ 3ヶ月</div>
+          </div>
+        </div>
+        <div class="voice-result">3ヶ月で -8kg ／ 終了後もリバウンドなし</div>
+        <div class="voice-text">今まで何度もダイエットに失敗してきた私が、GLAMOROUSで初めてリバウンドしませんでした。食事の知識が完全に変わったので、プログラムが終わっても自分でコントロールできています。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="container">
+    <div class="sec-head">
+      <div class="section-label">ご参加の流れ</div>
+      <h2 class="section-title">まずはLINEで<br>気軽に相談してください</h2>
+    </div>
+    <div class="flow-steps reveal">
+      <div class="flow-step">
+        <div class="flow-circle">1</div>
+        <div class="flow-title">LINEで無料相談</div>
+        <div class="flow-desc">まずはLINEから気軽にご連絡を。どんな些細な疑問でも丁寧にお答えします。</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-circle">2</div>
+        <div class="flow-title">対面カウンセリング（無料）</div>
+        <div class="flow-desc">佐賀サロンにてじっくり約60〜90分。耳ツボ体験もできます。遠方の方はご相談ください。</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-circle">3</div>
+        <div class="flow-title">プログラム開始</div>
+        <div class="flow-desc">専用プランが決まったら最短翌週からスタート。定期来店＋LINEサポートで伴走します。</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-circle">4</div>
+        <div class="flow-title">-10kg・リバウンドなし</div>
+        <div class="flow-desc">3ヶ月後、「今の自分が一番好き」と思える体と自信を手に入れてください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="price">
+  <div class="container">
+    <div class="sec-head">
+      <div class="section-label">料金プラン</div>
+      <h2 class="section-title">シンプルで<br>明確な料金体系</h2>
+      <p class="section-sub">詳細な料金はカウンセリング時にご説明します。まずはお気軽にご相談ください。</p>
+    </div>
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <div class="price-plan">STANDARD</div>
+        <div class="price-name">3ヶ月コース</div>
+        <div class="price-amount" style="font-size:1.8rem;">カウンセリング<span>にて</span></div>
+        <div class="price-period">ご案内します</div>
+        <ul class="price-features">
+          <li>耳ツボ施術（定期来店）</li>
+          <li>3食バランス食 個別プラン</li>
+          <li>独自プロテイン・サプリ指導</li>
+          <li>LINEサポート（毎日対応）</li>
+        </ul>
+        <a href="#cta" class="price-btn">無料相談で詳細を確認</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-label">🔥 人生最後のダイエット</div>
+        <div class="price-plan">RESULT COMMIT</div>
+        <div class="price-name">結果コミット 3ヶ月</div>
+        <div class="price-amount" style="font-size:1.6rem;">-8〜10<span>kg 保証</span></div>
+        <div class="price-period">（個別カウンセリングにて料金ご案内）</div>
+        <ul class="price-features">
+          <li>耳ツボ×LUMINAGLOWメソッド</li>
+          <li>完全オーダーメイド食事プラン</li>
+          <li>独自サプリ・プロテイン込み</li>
+          <li>LINEサポート（毎日対応）</li>
+          <li>リバウンド防止知識の完全伝授</li>
+          <li>卒業後フォロー付き</li>
+        </ul>
+        <a href="#cta" class="price-btn">まず無料相談してみる</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-plan">PREMIUM</div>
+        <div class="price-name">6ヶ月じっくりコース</div>
+        <div class="price-amount" style="font-size:1.8rem;">カウンセリング<span>にて</span></div>
+        <div class="price-period">ご案内します</div>
+        <ul class="price-features">
+          <li>耳ツボ施術（集中ケア）</li>
+          <li>3食 ＋ 間食プラン込み</li>
+          <li>独自サプリ・プロテイン指導</li>
+          <li>LINEサポート（毎日対応）</li>
+          <li>産後・更年期 専用ケア対応</li>
+          <li>卒業後6ヶ月フォロー</li>
+        </ul>
+        <a href="#cta" class="price-btn">無料相談で詳細を確認</a>
+      </div>
+    </div>
+    <p class="price-note">※ 初回カウンセリングは完全無料です。料金の詳細はカウンセリング時にご説明します。プレッシャーは一切ありません。<br>※ 分割払い対応可能。佐賀県内・福岡・長崎など近隣県からもご来店いただけます。</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head">
+      <div class="section-label">よくある質問</div>
+      <h2 class="section-title">気になるご質問</h2>
+      <p class="section-sub">お申し込み前に多くいただくご質問をまとめました。</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">
+          耳ツボって痛くないですか？効果はありますか？
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">ほとんど痛みはありません。耳には食欲・代謝に関わるツボが集中しており、正確な位置にシールを貼ることで食欲が自然と落ち着く効果が期待できます。ミリ単位の調整が必要なため対面施術でしか効果を発揮できません。初回カウンセリングで実際に体験できますので、ぜひ一度お試しください。</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          遠方からでも通えますか？佐賀以外でも大丈夫？
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">福岡・長崎など近隣県から通ってくださっているお客様が多数いらっしゃいます。来店頻度やスケジュールについてはカウンセリング時に柔軟にご相談いただけます。日々のサポートはLINEで対応しますので、通院できない日も安心して取り組めます。</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          産後や更年期でも参加できますか？
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">はい、むしろ得意としているお客様層です。産後のホルモン変化・更年期による代謝の低下など、ライフステージに合わせたアプローチで多くの方が結果を出されています。「普通のダイエットが全然効かなくなった」という方にこそ来ていただきたいです。</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          本当に運動なし・食べながらで痩せられますか？
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">はい。「何を食べないか」ではなく「何をどう食べるか」が核心です。独自サプリ・プロテインで栄養を補いながら代謝を上げ、耳ツボで食欲を整えることで自然と体脂肪が燃える体質になります。実際に3食しっかり食べながら-10kgを達成された方が多数いらっしゃいます。</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          プログラム終了後にリバウンドしませんか？
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">GLAMOROUSが「人生最後のダイエット」と呼ばれる理由がここにあります。体重を落とすだけでなく、プログラム終了後に自分で体型を維持できる「リバウンド防止知識」を完全に伝授します。卒業生の多くが「終わった後もずっと維持できている」とご報告くださっています。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta">
+  <div class="container">
+    <div class="section-label">今すぐ始めましょう</div>
+    <h2 class="section-title">「これで最後にする」と<br>決めた日が、変わる日です。</h2>
+    <div class="cta-campaign">
+      初回カウンセリング：<strong>完全無料</strong>  ／  耳ツボ体験あり  ／  佐賀サロン来店
+    </div>
+    <p class="section-sub">「まだ迷っている」「話だけ聞きたい」でも大歓迎です。<br>プレッシャーは一切ありません。まず佐賀に来てみてください。</p>
+    <div class="cta-actions">
+      <a href="#" class="btn-primary" style="font-size:1.1rem;padding:18px 48px;">
+        🌸 無料カウンセリングを予約する
+      </a>
+      <a href="#" class="btn-line" style="font-size:1.1rem;padding:18px 48px;">
+        💬 LINEで無料相談する
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo">
+          <img src="image/logo.svg" alt="パーソナルジム Make &amp; Space" class="logo-img footer-logo-img">
+        </a>
+        <p class="footer-desc">
+          佐賀発・女性専用「結果コミット型」ダイエットプログラム。<br>
+          耳ツボ×LUMINAGLOWメソッドで、3食食べながら-10kgへ。<br>
+          人生最後のダイエットを、一緒に成功させましょう。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>プログラム</h4>
+        <ul>
+          <li><a href="#features">3大特徴</a></li>
+          <li><a href="#program">プログラム内容</a></li>
+          <li><a href="#price">料金プラン</a></li>
+          <li><a href="#flow">ご参加の流れ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>サポート</h4>
+        <ul>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="#results">お客様の声</a></li>
+          <li><a href="#cta">無料カウンセリング</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 パーソナルジム Make &amp; Space. All rights reserved. | 佐賀県</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING LINE BUTTON -->
+<a href="#" class="float-line">
+  <span class="float-line-icon">💬</span>
+  LINEで相談
+</a>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Header scroll shadow
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    header.style.boxShadow = window.scrollY > 20
+      ? '0 4px 20px rgba(0,0,0,.1)'
+      : 'none';
+  });
+</script>
+</body>
+</html>
