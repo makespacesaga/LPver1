@@ -371,22 +371,32 @@
     }
     .voice-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
     .voice-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
-    .voice-avatar {
-      width: 50px; height: 50px; border-radius: 50%;
-      background: var(--rose-pale);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; flex-shrink: 0;
+    .voice-card-top { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+    .voice-avatar-img {
+      width: 62px; height: 62px; border-radius: 50%;
+      overflow: hidden; flex-shrink: 0;
+      border: 2px solid rgba(168,41,76,.2);
+      box-shadow: 0 4px 12px rgba(168,41,76,.15);
     }
+    .voice-avatar-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .voice-header-info { flex: 1; }
+    .stars { color: var(--gold); font-size: .88rem; letter-spacing: .1em; margin-bottom: 4px; }
     .voice-name { font-size: .9rem; font-weight: 700; color: var(--dark); }
     .voice-meta { font-size: .74rem; color: var(--muted); margin-top: 2px; }
     .voice-result {
       background: linear-gradient(135deg, var(--rose), #7A1830);
       border-radius: 8px; padding: 10px 16px;
       font-size: .88rem; font-weight: 700; color: #fff;
-      margin-bottom: 16px; text-align: center; letter-spacing: .04em;
+      margin-bottom: 10px; text-align: center; letter-spacing: .04em;
     }
-    .voice-text { font-size: .87rem; color: var(--muted); line-height: 1.9; }
-    .stars { color: var(--gold); font-size: .95rem; margin-bottom: 10px; letter-spacing: .1em; }
+    .voice-keyword {
+      font-family: var(--font-min);
+      font-size: .92rem; font-weight: 700;
+      color: var(--rose); margin-bottom: 10px;
+      padding-left: 10px; border-left: 3px solid var(--rose);
+      line-height: 1.5;
+    }
+    .voice-text { font-size: .85rem; color: var(--muted); line-height: 1.9; }
     @media (max-width: 768px) { .voice-grid { grid-template-columns: 1fr; } }
 
     /* ─── FLOW ─── */
@@ -820,42 +830,58 @@
     </div>
 
     <div class="voice-grid reveal">
+
+      <!-- voice card 1 -->
       <div class="voice-card">
-        <div class="stars">★★★★★</div>
-        <div class="voice-header">
-          <div class="voice-avatar">👩</div>
-          <div>
+        <div class="voice-card-top">
+          <div class="voice-avatar-img">
+            <img src="image/voice_km.jpg" alt="K.Mさん">
+          </div>
+          <div class="voice-header-info">
+            <div class="stars">★★★★★</div>
             <div class="voice-name">K.Mさん（36歳・佐賀市在住）</div>
             <div class="voice-meta">産後ダイエット ／ 3ヶ月コース</div>
           </div>
         </div>
-        <div class="voice-result">3ヶ月で -10kg ／ ウエスト -13cm</div>
+        <div class="voice-result">🏆 3ヶ月で <strong>-10kg</strong> ／ ウエスト <strong>-13cm</strong></div>
+        <div class="voice-keyword">「産後3年、諦めていた体が戻った」</div>
         <div class="voice-text">産後3年、どんなダイエットをしても戻らなかった体が、3ヶ月でここまで変わるとは思っていませんでした。耳ツボのおかげで不思議と食欲が落ち着いて、食べながら自然と痩せていった感じです。</div>
       </div>
+
+      <!-- voice card 2 -->
       <div class="voice-card">
-        <div class="stars">★★★★★</div>
-        <div class="voice-header">
-          <div class="voice-avatar">👩‍💼</div>
-          <div>
+        <div class="voice-card-top">
+          <div class="voice-avatar-img">
+            <img src="image/voice_ta.jpg" alt="T.Aさん">
+          </div>
+          <div class="voice-header-info">
+            <div class="stars">★★★★★</div>
             <div class="voice-name">T.Aさん（43歳・福岡から通院）</div>
             <div class="voice-meta">更年期ケア ／ 3ヶ月コース</div>
           </div>
         </div>
-        <div class="voice-result">3ヶ月で -9kg ／ 体脂肪率 -8%</div>
+        <div class="voice-result">🏆 3ヶ月で <strong>-9kg</strong> ／ 体脂肪率 <strong>-8%</strong></div>
+        <div class="voice-keyword">「福岡から通う価値が十分あった」</div>
         <div class="voice-text">福岡から佐賀まで通う価値が十分ありました。更年期で代謝が落ちきっていたのに、食事を減らさず逆に栄養をしっかり摂ることで体が変わっていきました。先生の知識の深さに毎回驚かされます。</div>
       </div>
+
+      <!-- voice card 3 -->
       <div class="voice-card">
-        <div class="stars">★★★★★</div>
-        <div class="voice-header">
-          <div class="voice-avatar">🧑‍🦱</div>
-          <div>
+        <div class="voice-card-top">
+          <div class="voice-avatar-img">
+            <img src="image/voice_ys.jpg" alt="Y.Sさん">
+          </div>
+          <div class="voice-header-info">
+            <div class="stars">★★★★★</div>
             <div class="voice-name">Y.Sさん（49歳・長崎から通院）</div>
             <div class="voice-meta">リバウンド卒業コース ／ 3ヶ月</div>
           </div>
         </div>
-        <div class="voice-result">3ヶ月で -8kg ／ 終了後もリバウンドなし</div>
+        <div class="voice-result">🏆 3ヶ月で <strong>-8kg</strong> ／ 終了後も <strong>リバウンドなし</strong></div>
+        <div class="voice-keyword">「初めてリバウンドしなかったダイエット」</div>
         <div class="voice-text">今まで何度もダイエットに失敗してきた私が、GLAMOROUSで初めてリバウンドしませんでした。食事の知識が完全に変わったので、プログラムが終わっても自分でコントロールできています。</div>
       </div>
+
     </div>
   </div>
 </section>
