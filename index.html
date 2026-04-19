@@ -216,7 +216,8 @@
       white-space: nowrap;
     }
     .floating-tag.top-left { top: -8px; left: -16px; color: var(--rose); border-left: 3px solid var(--rose); }
-    .floating-tag.bottom-right { bottom: -8px; right: -16px; color: var(--gold); border-left: 3px solid var(--gold); }
+    .floating-tag.bottom-right { bottom: -8px; right: -16px; color: var(--gold); border-left: 3px solid var(--gold); display: flex; align-items: center; gap: 6px; }
+    .floating-tag-icon { width: 20px; height: 20px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; gap: 40px; }
       .hero-image { order: -1; }
@@ -649,9 +650,11 @@
       </div>
 
       <div class="hero-image">
-        <div class="floating-tag top-left">佐賀No.1 結果コミット</div>
+        <div class="floating-tag top-left">佐賀No.1 結果コミット型</div>
         <img src="image/hero_main.jpg" alt="GLAMOROUSダイエット" class="hero-photo">
-        <div class="floating-tag bottom-right">✨ 運動なし・食べながら-10kg</div>
+        <div class="floating-tag bottom-right">
+          <img src="image/icon_result.png" class="floating-tag-icon" alt=""> 運動なし・食べながら-10kg
+        </div>
       </div>
     </div>
   </div>
