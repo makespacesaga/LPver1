@@ -303,6 +303,48 @@
     .feature-desc { font-size: .88rem; color: var(--muted); line-height: 1.9; }
     @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } }
 
+    /* ─── CBD ─── */
+    #cbd { padding: 96px 0; background: var(--ivory); }
+    .cbd-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .cbd-images { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cbd-img-main { grid-column: 1 / -1; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+    .cbd-img-sub { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .cbd-images img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .cbd-img-main img { height: 220px; }
+    .cbd-img-sub img { height: 130px; }
+    .cbd-title {
+      font-family: var(--font-min);
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      font-weight: 700; line-height: 1.55;
+      color: var(--dark); margin: 14px 0 20px;
+    }
+    .cbd-title em { font-style: normal; color: var(--rose); }
+    .cbd-desc { font-size: .93rem; color: var(--muted); line-height: 2; margin-bottom: 24px; }
+    .cbd-list {
+      list-style: none; display: flex; flex-direction: column;
+      gap: 11px; margin-bottom: 28px;
+    }
+    .cbd-list li {
+      display: flex; gap: 10px; align-items: flex-start;
+      font-size: .92rem; color: var(--dark);
+    }
+    .cbd-list li::before {
+      content: ''; display: block;
+      width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px;
+      background: url('image/icon_check_gold.png') center/contain no-repeat;
+    }
+    .cbd-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--gold), #9A6A20);
+      color: #fff; font-size: .8rem; font-weight: 700;
+      padding: 8px 20px; border-radius: 99px;
+      letter-spacing: .06em; margin-bottom: 28px;
+    }
+    .cbd-badge::before { content: '✦'; font-size: .7rem; }
+    @media (max-width: 768px) {
+      .cbd-inner { grid-template-columns: 1fr; gap: 36px; }
+    }
+
     /* ─── PROGRAM ─── */
     #program { padding: 96px 0; background: var(--ivory); }
     .program-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
@@ -742,6 +784,42 @@
         <div class="feature-icon"><img src="image/feat_knowledge.jpg" alt="リバウンド防止知識" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
         <div class="feature-title">一生モノの<br>「リバウンド防止知識」</div>
         <div class="feature-desc">プログラム終了後も自分で体型を維持できる食事の知識を完全伝授。体重を落とすだけでなく「もう二度と太らない習慣」を3ヶ月かけて身につけます。これが人生最後のダイエットになる理由です。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CBD SECTION -->
+<section id="cbd">
+  <div class="container">
+    <div class="cbd-inner reveal">
+      <div class="cbd-images">
+        <div class="cbd-img-main">
+          <img src="image/cbd_bottle.jpg" alt="CBDオイル">
+        </div>
+        <div class="cbd-img-sub">
+          <img src="image/cbd_relax.jpg" alt="施術とCBDオイル">
+        </div>
+      </div>
+      <div class="cbd-content">
+        <div class="section-label">パーソナルジム Make &amp; Space だけの特典</div>
+        <h2 class="cbd-title">施術と組み合わせることで、<br>体の奥から<em>ゆるんでいく。</em></h2>
+        <p class="cbd-desc">
+          デスクワークやストレスでガチガチになった首・肩。<br>
+          CBDは麻由来の天然成分で、精神作用はなく安心して使えるリラックス成分。<br>
+          耳ツボ施術と組み合わせることで、<strong>相乗効果で体の変化を実感</strong>できます。
+        </p>
+        <ul class="cbd-list">
+          <li>筋肉の緊張がゆるみやすい</li>
+          <li>自律神経が整いやすい</li>
+          <li>痛みの軽減をサポート</li>
+          <li>施術後の深いリラックス感が続く</li>
+          <li>「疲れが抜けない」「眠りが浅い」方にぴったり</li>
+        </ul>
+        <div class="cbd-badge">プログラムにセットで含まれています</div>
+        <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="btn-primary">
+          <img src="image/icon_counseling.png" class="btn-icon" alt=""> 無料カウンセリングで体験する
+        </a>
       </div>
     </div>
   </div>
