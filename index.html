@@ -21,6 +21,24 @@
   <meta name="twitter:description" content="運動なし・3食食べながら-10kg。耳ツボ×GLAMOROUSメソッド。初回無料。">
   <meta name="twitter:image" content="image/Gemini_Generated_Image_d2qhp5d2qhp5d2qh.png">
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '4036948373263638');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=4036948373263638&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -638,6 +656,9 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 24px; text-align: center; font-size: .76rem; }
     @media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr; gap: 32px; } }
 
+    /* ─── DISCLAIMER ─── */
+    .disclaimer { background: #F5EFE8; text-align: center; padding: 12px 20px; font-size: .75rem; color: #6B5458; border-top: 1px solid rgba(184,135,58,.15); }
+
     /* ─── FLOAT LINE ─── */
     .float-line {
       position: fixed; bottom: 24px; right: 20px; z-index: 200;
@@ -1228,6 +1249,11 @@
   </div>
 </section>
 
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  ※ 掲載のビフォーアフター・お客様の声は個人の感想です。効果には個人差があります。
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="container">
@@ -1303,6 +1329,18 @@
     header.style.boxShadow = window.scrollY > 20
       ? '0 4px 20px rgba(0,0,0,.1)'
       : 'none';
+  });
+
+  // Meta Pixel: LINEボタンクリック計測
+  document.querySelectorAll('a[href*="line.me"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact');
+        fbq('trackCustom', 'LINEButtonClick', {
+          button_location: btn.closest('section')?.id || 'unknown'
+        });
+      }
+    });
   });
 </script>
 </body>
