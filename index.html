@@ -320,6 +320,9 @@
       display: flex; align-items: center; justify-content: center;
       box-shadow: 0 4px 12px rgba(168,41,76,.3);
     }
+    .prog-header-icon { width: 22px; height: 22px; object-fit: cover; border-radius: 4px; vertical-align: middle; margin-right: 4px; }
+    .step-img-wrap { width: 100%; height: 80px; border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+    .step-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .step-content strong { display: block; font-size: .93rem; font-weight: 700; margin-bottom: 4px; color: var(--dark); }
     .step-content span { font-size: .82rem; color: var(--muted); line-height: 1.7; }
     .program-content h2 {
@@ -734,11 +737,12 @@
     <div class="program-inner">
       <div class="program-visual reveal">
         <div class="program-main-card">
-          <h3>📋 3ヶ月プログラムの流れ</h3>
+          <h3><img src="image/prog_header.png" class="prog-header-icon" alt=""> 3ヶ月プログラムの流れ</h3>
           <div class="step-list">
             <div class="step-item">
               <div class="step-dot">1</div>
               <div class="step-content">
+                <div class="step-img-wrap"><img src="image/prog_step1.jpg" alt="無料カウンセリング"></div>
                 <strong>無料カウンセリング（対面 / 佐賀）</strong>
                 <span>現在の体質・生活習慣・食の好みを丁寧にヒアリング。耳ツボの体験もできます。</span>
               </div>
@@ -746,6 +750,7 @@
             <div class="step-item">
               <div class="step-dot">2</div>
               <div class="step-content">
+                <div class="step-img-wrap"><img src="image/prog_step2.jpg" alt="プラン設計"></div>
                 <strong>あなた専用プランの設計</strong>
                 <span>耳ツボ施術の計画 ＋ 3食食事プラン ＋ 独自サプリを組み合わせた完全オーダーメイドプランを作成。</span>
               </div>
@@ -753,6 +758,7 @@
             <div class="step-item">
               <div class="step-dot">3</div>
               <div class="step-content">
+                <div class="step-img-wrap"><img src="image/prog_step3.jpg" alt="LINEサポート"></div>
                 <strong>定期来店 ＆ LINEサポート</strong>
                 <span>定期的な耳ツボ施術調整 ＋ 毎日のLINEで食事・体重を記録。バイオリズムに合わせてプランを最適化。</span>
               </div>
@@ -760,6 +766,7 @@
             <div class="step-item">
               <div class="step-dot">4</div>
               <div class="step-content">
+                <div class="step-img-wrap"><img src="image/prog_step4.jpg" alt="卒業・自走サポート"></div>
                 <strong>卒業 ＆ 自走サポート</strong>
                 <span>プログラム終了後も、一生モノの食事知識でリバウンドしない体を自分で維持できるようになります。</span>
               </div>
