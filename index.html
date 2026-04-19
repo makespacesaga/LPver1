@@ -218,6 +218,7 @@
     .floating-tag.top-left { top: -8px; left: -16px; color: var(--rose); border-left: 3px solid var(--rose); }
     .floating-tag.bottom-right { bottom: -8px; right: -16px; color: var(--gold); border-left: 3px solid var(--gold); display: flex; align-items: center; gap: 6px; }
     .floating-tag-icon { width: 20px; height: 20px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
+    .price-label-icon { width: 16px; height: 16px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; gap: 40px; }
       .hero-image { order: -1; }
@@ -454,6 +455,7 @@
       color: #fff; font-size: .7rem; font-weight: 700;
       padding: 5px 20px; border-radius: 99px;
       white-space: nowrap; letter-spacing: .1em;
+      display: inline-flex; align-items: center; gap: 5px;
     }
     .price-plan { font-family: var(--font-en); font-style: italic; font-size: .9rem; opacity: .6; margin-bottom: 6px; letter-spacing: .08em; }
     .price-name { font-family: var(--font-min); font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; }
@@ -955,7 +957,9 @@
       </div>
 
       <div class="price-card featured">
-        <div class="price-label">🔥 人生最後のダイエット</div>
+        <div class="price-label">
+          <img src="image/icon_crown.png" class="price-label-icon" alt=""> 人生最後のダイエット
+        </div>
         <div class="price-plan">RESULT COMMIT</div>
         <div class="price-name">結果コミット 3ヶ月</div>
         <div class="price-amount" style="font-size:1.6rem;">-8〜10<span>kg 保証</span></div>
