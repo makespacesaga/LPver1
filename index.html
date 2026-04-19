@@ -538,7 +538,10 @@
       background: rgba(184,135,58,.1); position: relative;
     }
     .cta-campaign strong { color: var(--gold-lt); font-size: 1.15rem; }
-    .cta-actions { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; position: relative; }
+    .cta-actions { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; position: relative; }
+    .cta-btn-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .cta-btn-note { font-size: .75rem; color: rgba(255,255,255,.6); letter-spacing: .03em; }
+    .btn-icon { width: 22px; height: 22px; object-fit: cover; border-radius: 4px; flex-shrink: 0; }
 
     /* ─── FOOTER ─── */
     footer { background: #130A0D; color: rgba(255,255,255,.45); padding: 56px 0 30px; }
@@ -619,12 +622,12 @@
         </p>
         <div class="hero-actions">
           <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="btn-primary">
-            <span>🌸</span> 無料カウンセリングを予約する
+            <img src="image/icon_counseling.png" class="btn-icon" alt=""> 無料カウンセリングを予約する
           </a>
           <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="btn-line">
-            <span>💬</span> LINEで無料相談する
+            <img src="image/icon_line.png" class="btn-icon" alt=""> LINEで無料相談する
           </a>
-          <p class="hero-note">※ 初回カウンセリング完全無料 ／ 佐賀県・福岡・長崎からお越しいただけます</p>
+          <p class="hero-note">✦ 初回カウンセリング完全無料 ／ 佐賀・福岡・長崎からご来店可能</p>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
@@ -1046,12 +1049,18 @@
     </div>
     <p class="section-sub">「まだ迷っている」「話だけ聞きたい」でも大歓迎です。<br>プレッシャーは一切ありません。まず佐賀に来てみてください。</p>
     <div class="cta-actions">
-      <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.1rem;padding:18px 48px;">
-        🌸 無料カウンセリングを予約する
-      </a>
-      <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="btn-line" style="font-size:1.1rem;padding:18px 48px;">
-        💬 LINEで無料相談する
-      </a>
+      <div class="cta-btn-wrap">
+        <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.1rem;padding:18px 48px;">
+          <img src="image/icon_counseling.png" class="btn-icon" alt=""> 無料カウンセリングを予約する
+        </a>
+        <p class="cta-btn-note">👆 完全無料・押し売りなし・所要60〜90分</p>
+      </div>
+      <div class="cta-btn-wrap">
+        <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="btn-line" style="font-size:1.1rem;padding:18px 48px;">
+          <img src="image/icon_line.png" class="btn-icon" alt=""> LINEで無料相談する
+        </a>
+        <p class="cta-btn-note">👆 まず話だけでも大歓迎です</p>
+      </div>
     </div>
   </div>
 </section>
