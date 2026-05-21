@@ -8,6 +8,24 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TL69MRGG');</script>
   <!-- End Google Tag Manager -->
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wgil7hrsd4");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <!-- Google tag (gtag.js) - GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QZJC58J13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0QZJC58J13');
+  </script>
+  <!-- End Google tag -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>パーソナルジム Make &amp; Space | 人生最後のダイエット。3ヶ月で、今の自分が一番好きになる。</title>
@@ -667,6 +685,48 @@
     /* ─── DISCLAIMER ─── */
     .disclaimer { background: #F5EFE8; text-align: center; padding: 12px 20px; font-size: .75rem; color: #6B5458; border-top: 1px solid rgba(184,135,58,.15); }
 
+    /* ─── HERO SCARCITY BADGE ─── */
+    .hero-scarcity-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--rose) 0%, #7A1830 100%);
+      color: #fff; font-size: .82rem; font-weight: 700;
+      padding: 7px 16px; border-radius: 99px;
+      margin-bottom: 14px; letter-spacing: .04em;
+      animation: pulse-badge 2s ease-in-out infinite;
+    }
+    .hero-scarcity-badge strong { color: var(--gold-lt); }
+    @keyframes pulse-badge {
+      0%,100% { box-shadow: 0 0 0 0 rgba(168,41,76,.4); }
+      50% { box-shadow: 0 0 0 8px rgba(168,41,76,0); }
+    }
+
+    /* ─── STICKY BOTTOM CTA ─── */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+      background: rgba(28,16,18,.97); backdrop-filter: blur(8px);
+      padding: 12px 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      transform: translateY(100%); transition: transform .4s ease;
+      border-top: 2px solid var(--rose);
+    }
+    .sticky-cta.show { transform: translateY(0); }
+    .sticky-cta-text { color: #fff; font-size: .82rem; line-height: 1.4; }
+    .sticky-cta-text strong { color: var(--gold-lt); display: block; font-size: .9rem; }
+    .sticky-cta-btn {
+      flex-shrink: 0;
+      background: var(--line-grn); color: #fff;
+      padding: 11px 22px; border-radius: 99px;
+      font-size: .86rem; font-weight: 700; text-decoration: none;
+      white-space: nowrap; box-shadow: 0 4px 16px rgba(6,199,85,.45);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .sticky-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(6,199,85,.55); }
+    @media (max-width: 480px) {
+      .sticky-cta { flex-direction: column; padding: 10px 16px; gap: 8px; }
+      .sticky-cta-btn { width: 100%; text-align: center; }
+      .sticky-cta-text { font-size: .78rem; }
+    }
+
     /* ─── FLOAT LINE ─── */
     .float-line {
       position: fixed; bottom: 24px; right: 20px; z-index: 200;
@@ -714,7 +774,7 @@
       .cta-btn-wrap { width: 100%; }
       .cta-btn-wrap .btn-primary,
       .cta-btn-wrap .btn-line { width: 100%; font-size: 1rem; padding: 16px 20px; }
-      .float-line { bottom: 16px; right: 12px; font-size: .8rem; padding: 10px 14px; }
+      .float-line { display: none; }
       .footer-inner { grid-template-columns: 1fr; gap: 28px; }
       .voice-keyword { font-size: .75rem; white-space: normal; }
     }
@@ -728,7 +788,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- URGENCY BAR -->
 <div class="urgency-bar">
-  <strong>【4月限定】</strong> 初回カウンセリング完全無料 ＋ 耳ツボ体験あり ／ <strong>今月残席 あとわずか</strong>
+  🔥 <strong>【5月限定】</strong> 今月の無料カウンセリング枠 <strong>残り3名様</strong> ／ 初回完全無料・押し売りなし ／ <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" style="color:var(--gold-lt);text-decoration:underline;">今すぐLINEで予約する →</a>
 </div>
 
 <!-- HEADER -->
@@ -762,7 +822,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-eyebrow">✦ 佐賀発・女性専用 結果コミット型ダイエット</div>
+        <div class="hero-scarcity-badge">🔥 今月の無料カウンセリング枠 残り<strong>3名様</strong>のみ</div>
+        <div class="hero-eyebrow">✦ 佐賀発・女性専用 結果コミット型ダイエット ／ 累計150名以上が達成</div>
         <h1 class="hero-title">
           人生最後のダイエット。<br>
           <em>3ヶ月で、今の自分が<br>一番好きになる。</em>
@@ -785,6 +846,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="stat-item">
             <div class="stat-num">-8〜10<span>kg</span></div>
             <div class="stat-label">3ヶ月平均減量</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">150<span>名+</span></div>
+            <div class="stat-label">累計達成者数</div>
           </div>
           <div class="stat-item">
             <div class="stat-num">3<span>食</span></div>
@@ -1127,25 +1192,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="price-card">
         <div class="price-plan">STANDARD</div>
         <div class="price-name">3ヶ月コース</div>
-        <div class="price-amount" style="font-size:1.8rem;">カウンセリング<span>にて</span></div>
-        <div class="price-period">ご案内します</div>
+        <div class="price-amount" style="font-size:1.5rem;">月々<strong style="font-size:2rem;">3</strong>万円台<span>〜</span></div>
+        <div class="price-period">分割払い対応可 ／ 無料相談で詳細ご案内</div>
         <ul class="price-features">
           <li>耳ツボ施術（定期来店）</li>
           <li>3食バランス食 個別プラン</li>
           <li>独自プロテイン・サプリ指導</li>
           <li>LINEサポート（毎日対応）</li>
         </ul>
-        <a href="#cta" class="price-btn">無料相談で詳細を確認</a>
+        <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="price-btn">LINEで無料相談する</a>
       </div>
 
       <div class="price-card featured">
         <div class="price-label">
-          <img src="image/icon_crown.png" class="price-label-icon" alt=""> 人生最後のダイエット
+          <img src="image/icon_crown.png" class="price-label-icon" alt=""> 人気No.1 / 今月残り3名
         </div>
         <div class="price-plan">RESULT COMMIT</div>
         <div class="price-name">結果コミット 3ヶ月</div>
-        <div class="price-amount" style="font-size:1.6rem;">-8〜10<span>kg 保証</span></div>
-        <div class="price-period">（個別カウンセリングにて料金ご案内）</div>
+        <div class="price-amount" style="font-size:1.5rem;">月々<strong style="font-size:2rem;">4</strong>万円台<span>〜</span></div>
+        <div class="price-period">-8〜10kg保証 ／ 分割払い対応可</div>
         <ul class="price-features">
           <li>耳ツボ×GLAMOROUSメソッド</li>
           <li>完全オーダーメイド食事プラン</li>
@@ -1154,14 +1219,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>リバウンド防止知識の完全伝授</li>
           <li>卒業後フォロー付き</li>
         </ul>
-        <a href="#cta" class="price-btn">まず無料相談してみる</a>
+        <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="price-btn">今すぐ無料相談する（残り3枠）</a>
       </div>
 
       <div class="price-card">
         <div class="price-plan">PREMIUM</div>
         <div class="price-name">6ヶ月じっくりコース</div>
-        <div class="price-amount" style="font-size:1.8rem;">カウンセリング<span>にて</span></div>
-        <div class="price-period">ご案内します</div>
+        <div class="price-amount" style="font-size:1.5rem;">月々<strong style="font-size:2rem;">3</strong>万円台<span>〜</span></div>
+        <div class="price-period">長期サポート付き ／ 無料相談で詳細ご案内</div>
         <ul class="price-features">
           <li>耳ツボ施術（集中ケア）</li>
           <li>3食 ＋ 間食プラン込み</li>
@@ -1170,10 +1235,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>産後・更年期 専用ケア対応</li>
           <li>卒業後6ヶ月フォロー</li>
         </ul>
-        <a href="#cta" class="price-btn">無料相談で詳細を確認</a>
+        <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="price-btn">LINEで無料相談する</a>
       </div>
     </div>
-    <p class="price-note">※ 初回カウンセリングは完全無料です。料金の詳細はカウンセリング時にご説明します。プレッシャーは一切ありません。<br>※ 分割払い対応可能。佐賀県内・福岡・長崎など近隣県からもご来店いただけます。</p>
+    <p class="price-note">※ 表示は目安の月額です。詳細はカウンセリング時にご説明します（料金の無理な押し付けは一切ありません）。<br>※ 分割払い対応可能。佐賀県内・福岡・長崎など近隣県からもご来店いただけます。初回カウンセリングは完全無料です。</p>
   </div>
 </section>
 
@@ -1238,12 +1303,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- CTA BANNER -->
 <section id="cta">
   <div class="container">
-    <div class="section-label">今すぐ始めましょう</div>
+    <div class="section-label">🔥 今月残り3名様限定</div>
     <h2 class="section-title">「これで最後にする」と<br>決めた日が、変わる日です。</h2>
     <div class="cta-campaign">
-      初回カウンセリング：<strong>完全無料</strong>  ／  耳ツボ体験あり  ／  佐賀サロン来店
+      今月の無料カウンセリング枠：<strong>残り3名様</strong>  ／  初回完全無料  ／  耳ツボ体験あり
     </div>
-    <p class="section-sub">「まだ迷っている」「話だけ聞きたい」でも大歓迎です。<br>プレッシャーは一切ありません。まず佐賀に来てみてください。</p>
+    <p class="section-sub">「まだ迷っている」「話だけ聞きたい」でも大歓迎です。<br>プレッシャーは一切ありません。今すぐLINEでご連絡ください。</p>
     <div class="cta-actions">
       <div class="cta-btn-wrap">
         <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.1rem;padding:18px 48px;">
@@ -1306,6 +1371,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<!-- STICKY BOTTOM CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-text">
+    <strong>🔥 今月の無料カウンセリング枠 残り3名様</strong>
+    初回完全無料・押し売りなし・佐賀サロン or LINE相談
+  </div>
+  <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="sticky-cta-btn">
+    💬 今すぐLINEで予約する
+  </a>
+</div>
+
 <!-- FLOATING LINE BUTTON -->
 <a href="https://line.me/ti/p/%40855akluh" target="_blank" rel="noopener" class="float-line">
   <span class="float-line-icon">💬</span>
@@ -1335,21 +1411,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }, { threshold: 0.1 });
   revealEls.forEach(el => observer.observe(el));
 
-  // Header scroll shadow
+  // Header scroll shadow + sticky CTA
   const header = document.querySelector('header');
+  const stickyCta = document.getElementById('stickyCta');
+  const heroSection = document.getElementById('hero');
   window.addEventListener('scroll', () => {
     header.style.boxShadow = window.scrollY > 20
       ? '0 4px 20px rgba(0,0,0,.1)'
       : 'none';
+    const heroBottom = heroSection ? heroSection.getBoundingClientRect().bottom : 0;
+    const show = heroBottom < 0;
+    stickyCta.classList.toggle('show', show);
+    const floatLine = document.querySelector('.float-line');
+    if (floatLine) floatLine.style.display = show ? 'none' : 'flex';
   });
 
-  // Meta Pixel: LINEボタンクリック計測
+  // コンバージョン計測: LINEボタンクリック
   document.querySelectorAll('a[href*="line.me"]').forEach(btn => {
     btn.addEventListener('click', () => {
+      // GA4イベント（Google広告コンバージョンとしてインポート可能）
+      if (typeof gtag === 'function') {
+        gtag('event', 'line_click', {
+          event_category: 'conversion',
+          event_label: 'personal_gym_line'
+        });
+      }
+      // Meta Pixel
       if (typeof fbq === 'function') {
         fbq('track', 'Contact');
         fbq('trackCustom', 'LINEButtonClick', {
-          button_location: btn.closest('section')?.id || 'unknown'
+          button_location: btn.closest('section')?.id || btn.closest('.sticky-cta') ? 'sticky_cta' : 'unknown'
         });
       }
     });
