@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4K株式会社 | SNS運用・動画制作・コンサルティング</title>
+<meta name="description" content="SNS運用代行・動画制作・企業/個人コンサルティングを手がける4K株式会社（ヨンケー）。福岡から全国へ、あなたの発信をもっと遠くへ届けます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Zen Kaku Gothic New', system-ui, sans-serif;
+    background: #0b0d10;
+    color: #f4f1ea;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    --ac: #2f5bff;
+    --ac2: #ff5d39;
+  }
+
+  @keyframes marqueeMove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50%       { transform: translateY(-14px) rotate(-8deg); }
+  }
+  @keyframes floaty2 {
+    0%, 100% { transform: translateY(0) rotate(7deg); }
+    50%       { transform: translateY(12px) rotate(7deg); }
+  }
+
+  a { transition: opacity 0.2s, transform 0.2s, filter 0.2s, border-color 0.2s; }
+
+  /* Header */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(11,13,16,0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(244,241,234,0.10);
+  }
+  .header-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    text-decoration: none;
+    color: #f4f1ea;
+  }
+  .logo-mark {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+  .logo-sub {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(244,241,234,0.55);
+    letter-spacing: 0.04em;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(244,241,234,0.78);
+    text-decoration: none;
+  }
+  .nav-link:hover { color: #f4f1ea; }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 22px;
+    border-radius: 100px;
+    background: var(--ac);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .nav-cta:hover { filter: brightness(1.12); }
+
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Section label */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .section-label-bar {
+    width: 26px;
+    height: 4px;
+    border-radius: 4px;
+  }
+  .section-label-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.16em;
+  }
+  .section-h2 {
+    margin: 0 0 56px;
+    font-weight: 900;
+    font-size: clamp(30px, 4.6vw, 58px);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+  }
+
+  /* Hero */
+  #top {
+    position: relative;
+    padding: clamp(64px, 9vw, 128px) 0 clamp(72px, 9vw, 120px);
+  }
+  .hero-glow-1 {
+    position: absolute;
+    top: -120px; right: -160px;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(47,91,255,0.22), rgba(47,91,255,0) 70%);
+    pointer-events: none;
+  }
+  .hero-glow-2 {
+    position: absolute;
+    bottom: -180px; left: -140px;
+    width: 460px; height: 460px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,93,57,0.16), rgba(255,93,57,0) 70%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  .hero-copy { flex: 1 1 460px; min-width: 300px; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 18px;
+    border: 1px solid rgba(244,241,234,0.22);
+    border-radius: 100px;
+    margin-bottom: 30px;
+  }
+  .hero-badge-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--ac2);
+    flex-shrink: 0;
+  }
+  .hero-badge-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: rgba(244,241,234,0.9);
+  }
+  .hero-h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: clamp(46px, 7.4vw, 102px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+  }
+  .hero-h1 .accent { color: var(--ac); }
+  .hero-lead {
+    margin: 28px 0 0;
+    font-size: clamp(16px, 1.7vw, 20px);
+    line-height: 1.95;
+    color: rgba(244,241,234,0.74);
+    max-width: 540px;
+  }
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 34px;
+    border-radius: 100px;
+    background: var(--ac);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 14px 34px rgba(47,91,255,0.34);
+  }
+  .btn-primary:hover { transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 18px 32px;
+    border-radius: 100px;
+    border: 1.5px solid rgba(244,241,234,0.28);
+    color: #f4f1ea;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .btn-outline:hover { border-color: rgba(244,241,234,0.6); }
+
+  .hero-visual { flex: 1 1 380px; min-width: 280px; position: relative; }
+  .hero-img-placeholder {
+    aspect-ratio: 4 / 5;
+    border-radius: 26px;
+    background: repeating-linear-gradient(135deg, #15181d, #15181d 18px, #111419 18px, #111419 36px);
+    border: 1px solid rgba(244,241,234,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-img-label {
+    font-family: ui-monospace, monospace;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: rgba(244,241,234,0.5);
+    text-align: center;
+    line-height: 2;
+  }
+  .hero-float-1 {
+    position: absolute;
+    top: -18px; left: -22px;
+    padding: 14px 20px;
+    border-radius: 16px;
+    background: var(--ac2);
+    color: #fff;
+    font-weight: 900;
+    font-size: 15px;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.35);
+    animation: floaty 5s ease-in-out infinite;
+  }
+  .hero-float-2 {
+    position: absolute;
+    bottom: 26px; right: -20px;
+    padding: 14px 20px;
+    border-radius: 16px;
+    background: #f4f1ea;
+    color: #0b0d10;
+    font-weight: 900;
+    font-size: 15px;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.35);
+    animation: floaty2 6s ease-in-out infinite;
+  }
+
+  /* Marquee */
+  .marquee-wrap {
+    background: var(--ac);
+    padding: 20px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-track {
+    display: inline-flex;
+    align-items: center;
+    animation: marqueeMove 26s linear infinite;
+    will-change: transform;
+  }
+  .marquee-item {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(22px, 3vw, 34px);
+    color: #fff;
+    letter-spacing: 0.04em;
+  }
+
+  /* Strengths */
+  #strengths {
+    background: #f7f5f0;
+    color: #0b0d10;
+    padding: clamp(80px, 10vw, 140px) 0;
+  }
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+    gap: 24px;
+  }
+  .strength-card {
+    background: #fff;
+    border: 1px solid rgba(11,13,16,0.08);
+    border-radius: 22px;
+    padding: 34px 30px;
+  }
+  .strength-card.dark {
+    background: #0b0d10;
+    color: #f4f1ea;
+    border: none;
+  }
+  .strength-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 46px;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: var(--ac);
+  }
+  .strength-card.dark .strength-num { color: var(--ac2); }
+  .strength-h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 900;
+  }
+  .strength-p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(11,13,16,0.62);
+  }
+  .strength-card.dark .strength-p { color: rgba(244,241,234,0.66); }
+
+  /* Services */
+  #services {
+    background: #0b0d10;
+    color: #f4f1ea;
+    padding: clamp(80px, 10vw, 140px) 0;
+  }
+  .services-lead {
+    margin: 0 0 56px;
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 1.9;
+    color: rgba(244,241,234,0.6);
+    max-width: 580px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: #15181d;
+    border: 1px solid rgba(244,241,234,0.10);
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-thumb {
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+  .service-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .service-card:hover .service-thumb img { transform: scale(1.04); }
+  .service-index {
+    font-family: 'Anton', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: var(--ac);
+    margin-bottom: 8px;
+  }
+  .service-h3 {
+    margin: 0 0 12px;
+    font-size: 23px;
+    font-weight: 900;
+  }
+  .service-p {
+    margin: 0 0 18px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(244,241,234,0.64);
+  }
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+  }
+  .tag {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 100px;
+    background: rgba(244,241,234,0.07);
+    color: rgba(244,241,234,0.7);
+  }
+
+  /* Flow */
+  #flow {
+    background: #f7f5f0;
+    color: #0b0d10;
+    padding: clamp(80px, 10vw, 140px) 0;
+  }
+  .flow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 22px;
+  }
+  .flow-step {
+    border-top: 3px solid var(--ac);
+    padding-top: 22px;
+  }
+  .flow-step.accent2 { border-top-color: var(--ac2); }
+  .flow-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--ac);
+    margin-bottom: 16px;
+  }
+  .flow-step.accent2 .flow-num { color: var(--ac2); }
+  .flow-h3 {
+    margin: 0 0 10px;
+    font-size: 19px;
+    font-weight: 900;
+  }
+  .flow-p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.85;
+    color: rgba(11,13,16,0.62);
+  }
+
+  /* Company */
+  #company {
+    background: #f7f5f0;
+    color: #0b0d10;
+    padding: 0 0 clamp(80px, 10vw, 140px);
+  }
+  .company-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: stretch;
+  }
+  .company-table { flex: 1 1 460px; min-width: 300px; }
+  .company-row {
+    display: flex;
+    gap: 20px;
+    padding: 24px 4px;
+    border-bottom: 1px solid rgba(11,13,16,0.12);
+  }
+  .company-row-label {
+    flex: 0 0 140px;
+    font-size: 14px;
+    font-weight: 900;
+    color: rgba(11,13,16,0.5);
+  }
+  .company-row-val {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+  .company-row-val span { font-weight: 500; color: rgba(11,13,16,0.55); }
+  .company-map {
+    flex: 1 1 320px;
+    min-width: 280px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(11,13,16,0.10);
+    min-height: 300px;
+  }
+  .company-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+    display: block;
+    filter: grayscale(20%);
+  }
+
+  /* FAQ */
+  #faq {
+    background: #0b0d10;
+    color: #f4f1ea;
+    padding: clamp(80px, 10vw, 140px) 0;
+  }
+  .faq-inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .faq-item { border-bottom: 1px solid rgba(244,241,234,0.14); }
+  .faq-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #f4f1ea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 26px 0;
+    text-align: left;
+    font-family: inherit;
+  }
+  .faq-q {
+    font-size: clamp(16px, 1.9vw, 20px);
+    font-weight: 800;
+  }
+  .faq-icon {
+    flex: 0 0 auto;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--ac2);
+    transition: transform 0.3s ease;
+    line-height: 1;
+    user-select: none;
+  }
+  .faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .faq-body.open { max-height: 260px; }
+  .faq-a {
+    margin: 0;
+    padding: 0 0 26px;
+    font-size: 16px;
+    line-height: 1.95;
+    color: rgba(244,241,234,0.66);
+  }
+
+  /* Contact CTA */
+  #contact {
+    background: var(--ac);
+    color: #fff;
+    padding: clamp(80px, 11vw, 150px) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-glow-1 {
+    position: absolute;
+    top: -140px; right: -120px;
+    width: 460px; height: 460px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.10);
+    pointer-events: none;
+  }
+  .contact-glow-2 {
+    position: absolute;
+    bottom: -160px; left: -100px;
+    width: 380px; height: 380px;
+    border-radius: 50%;
+    background: rgba(255,93,57,0.30);
+    pointer-events: none;
+  }
+  .contact-inner {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    text-align: center;
+  }
+  .contact-eyebrow {
+    margin: 0 0 18px;
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.85);
+  }
+  .contact-h2 {
+    margin: 0 0 24px;
+    font-weight: 900;
+    font-size: clamp(34px, 6vw, 78px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .contact-lead {
+    margin: 0 auto 44px;
+    font-size: clamp(16px, 1.8vw, 20px);
+    line-height: 1.9;
+    color: rgba(255,255,255,0.88);
+    max-width: 560px;
+  }
+  .btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 44px;
+    border-radius: 100px;
+    background: #0b0d10;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+  }
+  .btn-dark:hover { transform: translateY(-2px); }
+
+  /* Footer */
+  footer {
+    background: #0b0d10;
+    color: #f4f1ea;
+    padding: clamp(56px, 7vw, 88px) 0 40px;
+    border-top: 1px solid rgba(244,241,234,0.10);
+  }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 44px;
+    border-bottom: 1px solid rgba(244,241,234,0.10);
+  }
+  .footer-brand { flex: 1 1 280px; min-width: 240px; }
+  .footer-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .footer-logo-mark {
+    font-family: 'Anton', sans-serif;
+    font-size: 34px;
+    line-height: 1;
+  }
+  .footer-logo-sub {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(244,241,234,0.55);
+  }
+  .footer-tagline {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(244,241,234,0.6);
+    max-width: 320px;
+  }
+  .footer-col-label {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: rgba(244,241,234,0.45);
+    margin-bottom: 16px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .footer-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(244,241,234,0.78);
+    text-decoration: none;
+  }
+  .footer-link:hover { color: #f4f1ea; }
+  .footer-address {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.95;
+    color: rgba(244,241,234,0.78);
+  }
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 28px;
+  }
+  .copyright { font-size: 12px; color: rgba(244,241,234,0.45); }
+  .back-top {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(244,241,234,0.6);
+    text-decoration: none;
+  }
+  .back-top:hover { color: #f4f1ea; }
+
+  /* President / hero photo */
+  .hero-img-photo {
+    aspect-ratio: 4 / 5;
+    border-radius: 26px;
+    overflow: hidden;
+    border: 1px solid rgba(244,241,234,0.12);
+  }
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* President section */
+  #president { background: #f7f5f0; color: #0b0d10; padding: clamp(80px, 10vw, 140px) 0; }
+  .president-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  .president-copy { flex: 1 1 360px; min-width: 280px; }
+  .president-title-label {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    color: rgba(11,13,16,0.45);
+    margin-bottom: 8px;
+  }
+  .president-name {
+    margin: 0 0 28px;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(52px, 9vw, 96px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #0b0d10;
+  }
+  .president-msg {
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 2;
+    color: rgba(11,13,16,0.68);
+    max-width: 480px;
+    margin: 0;
+  }
+  .president-photo-wrap {
+    flex: 1 1 340px;
+    min-width: 260px;
+    position: relative;
+  }
+  .president-photo-wrap img {
+    width: 100%;
+    border-radius: 26px;
+    display: block;
+    box-shadow: 0 24px 60px rgba(11,13,16,0.14);
+  }
+  .president-photo-badge {
+    position: absolute;
+    bottom: -20px;
+    left: -16px;
+    background: var(--ac);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 16px;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 10px 28px rgba(47,91,255,0.35);
+  }
+
+  /* ── Hamburger button ── */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+  .menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #f4f1ea;
+    border-radius: 2px;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+  }
+  .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── Mobile nav dropdown ── */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    z-index: 48;
+    background: rgba(11,13,16,0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(244,241,234,0.10);
+    padding: 8px 24px 20px;
+    flex-direction: column;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    pointer-events: none;
+  }
+  .mobile-nav.open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-nav a {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(244,241,234,0.85);
+    text-decoration: none;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(244,241,234,0.08);
+    display: block;
+  }
+  .mobile-nav a:last-child {
+    border-bottom: none;
+    color: var(--ac);
+    margin-top: 4px;
+  }
+
+  /* ── Mobile breakpoint ≤ 680px ── */
+  @media (max-width: 680px) {
+
+    /* Header */
+    .nav-link { display: none; }
+    .menu-toggle { display: flex; }
+    .header-inner { height: 64px; padding: 0 16px; }
+
+    /* Container padding */
+    .container { padding: 0 16px; }
+    .faq-inner { padding: 0 16px; }
+
+    /* Hero: reverse order so photo shows first */
+    .hero-inner {
+      flex-direction: column-reverse;
+      gap: 28px;
+    }
+    .hero-copy { min-width: 0; width: 100%; }
+    .hero-visual {
+      min-width: 0;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .hero-img-photo { aspect-ratio: 3 / 4; }
+    .hero-float-1, .hero-float-2 { display: none; }
+
+    /* Hero text */
+    .hero-badge { margin-bottom: 20px; }
+    .hero-badge-text { font-size: 11px; }
+    .hero-lead { margin-top: 16px; }
+
+    /* Hero buttons: full-width stack */
+    .hero-btns { flex-direction: column; gap: 12px; margin-top: 28px; }
+    .btn-primary, .btn-outline {
+      justify-content: center;
+      text-align: center;
+      padding: 16px 24px;
+    }
+
+    /* Section spacing */
+    .section-h2 { margin-bottom: 32px; }
+
+    /* Strengths: 1 col, smaller padding */
+    .strength-card { padding: 24px 20px; }
+
+    /* Services: smaller card padding */
+    .service-card { padding: 20px; }
+
+    /* Flow: 2-col grid on mobile */
+    .flow-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* Company table */
+    .company-row { gap: 10px; padding: 18px 4px; }
+    .company-row-label {
+      flex: 0 0 80px;
+      font-size: 12px;
+    }
+    .company-row-val { font-size: 14px; }
+
+    /* President: photo first on mobile */
+    .president-inner {
+      flex-direction: column-reverse;
+      gap: 28px;
+    }
+    .president-copy { min-width: 0; width: 100%; }
+    .president-photo-wrap {
+      min-width: 0;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+    .president-photo-badge { display: none; }
+    .president-name { font-size: clamp(44px, 12vw, 72px); }
+
+    /* FAQ: taller open state for wrapping text */
+    .faq-body.open { max-height: 400px; }
+    .faq-btn { padding: 20px 0; }
+    .faq-q { font-size: 15px; }
+    .faq-a { font-size: 15px; }
+
+    /* Contact CTA button */
+    .btn-dark {
+      padding: 17px 28px;
+      font-size: 15px;
+      width: 100%;
+      max-width: 320px;
+      justify-content: center;
+    }
+
+    /* Footer */
+    .footer-top { gap: 24px; }
+    .footer-brand { min-width: 0; }
+    .mobile-nav { top: 64px; }
+  }
+
+  /* ── Very small screens ≤ 380px ── */
+  @media (max-width: 380px) {
+    .flow-grid { grid-template-columns: 1fr; }
+    .hero-badge-text { font-size: 10px; letter-spacing: 0.03em; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">4K</span>
+      <span class="logo-sub">株式会社</span>
+    </a>
+    <nav>
+      <a href="#strengths" class="nav-link">強み</a>
+      <a href="#services"  class="nav-link">サービス</a>
+      <a href="#flow"      class="nav-link">流れ</a>
+      <a href="#company"   class="nav-link">会社概要</a>
+      <a href="#faq"       class="nav-link">FAQ</a>
+      <a href="#contact"   class="nav-cta">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="モバイルメニュー">
+  <a href="#strengths">強み</a>
+  <a href="#services">サービス</a>
+  <a href="#flow">流れ</a>
+  <a href="#company">会社概要</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">お問い合わせ</a>
+</nav>
+
+<!-- HERO -->
+<section id="top">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-text">SNS運用 × 動画制作 × コンサルティング</span>
+      </div>
+      <h1 class="hero-h1">
+        <span style="display:block;">もっと伝わる、</span>
+        <span style="display:block;" class="accent">もっと広がる。</span>
+      </h1>
+      <p class="hero-lead">SNS運用も、動画制作も、コンサルも。4K株式会社は、発信のチカラで、あなたのブランドを"まだ見ぬ誰か"のところまで届けます。</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">まずは気軽に相談 →</a>
+        <a href="#services" class="btn-outline">サービスを見る</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-photo">
+        <img src="img/president.jpg" alt="代表取締役 多賀谷兵馬" class="hero-photo">
+      </div>
+      <div class="hero-float-1">バズる発信を、本気で。</div>
+      <div class="hero-float-2">企画 → 撮影 → 運用</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">SNS運用代行&nbsp;&nbsp;✦&nbsp;&nbsp;動画制作・編集&nbsp;&nbsp;✦&nbsp;&nbsp;企業コンサルティング&nbsp;&nbsp;✦&nbsp;&nbsp;個人コンサルティング&nbsp;&nbsp;✦&nbsp;&nbsp;ブランディング&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+    <span class="marquee-item">SNS運用代行&nbsp;&nbsp;✦&nbsp;&nbsp;動画制作・編集&nbsp;&nbsp;✦&nbsp;&nbsp;企業コンサルティング&nbsp;&nbsp;✦&nbsp;&nbsp;個人コンサルティング&nbsp;&nbsp;✦&nbsp;&nbsp;ブランディング&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<!-- STRENGTHS -->
+<section id="strengths">
+  <div class="container">
+    <div class="section-label">
+      <span class="section-label-bar" style="background:var(--ac);"></span>
+      <span class="section-label-text" style="color:var(--ac);">WHY 4K</span>
+    </div>
+    <h2 class="section-h2">4Kが、ずっと隣にいる理由。</h2>
+    <div class="strengths-grid">
+      <div class="strength-card">
+        <div class="strength-num">01</div>
+        <h3 class="strength-h3">戦略から、いっしょに。</h3>
+        <p class="strength-p">なんとなくの発信はしません。目的と数字を見ながら、ちゃんと伝わる形を一緒に設計します。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">02</div>
+        <h3 class="strength-h3">撮影も運用も、ワンストップ。</h3>
+        <p class="strength-p">企画・撮影・編集・投稿・分析まで。バラバラに頼む手間は、もう要りません。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">03</div>
+        <h3 class="strength-h3">企業も個人も、フェーズに合わせて。</h3>
+        <p class="strength-p">経営者の方から個人の発信者まで。今のステージにちょうどいい関わり方をご提案します。</p>
+      </div>
+      <div class="strength-card dark">
+        <div class="strength-num">04</div>
+        <h3 class="strength-h3">スピード感を、武器に。</h3>
+        <p class="strength-p">流れの速いSNSだから、判断も実行もはやく。トレンドに乗り遅れません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">
+      <span class="section-label-bar" style="background:var(--ac2);"></span>
+      <span class="section-label-text" style="color:var(--ac2);">SERVICES</span>
+    </div>
+    <h2 class="section-h2" style="margin-bottom:14px;">わたしたちに、できること。</h2>
+    <p class="services-lead">必要な部分だけでも、まるごとでも。あなたの「伝えたい」に合わせて自由に組み合わせられます。</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-thumb"><img src="img/service_sns.png" alt="SNS運用代行"></div>
+        <div class="service-index">01 / SNS</div>
+        <h3 class="service-h3">SNS運用代行</h3>
+        <p class="service-p">Instagram・TikTok・X・YouTube。アカウント設計から投稿、分析・改善まで、まるごとお任せください。</p>
+        <div class="service-tags">
+          <span class="tag">運用設計</span>
+          <span class="tag">投稿制作</span>
+          <span class="tag">分析</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-thumb"><img src="img/service_movie.png" alt="動画制作・編集"></div>
+        <div class="service-index">02 / MOVIE</div>
+        <h3 class="service-h3">動画制作・編集</h3>
+        <p class="service-p">ショート動画からブランドムービーまで。企画・撮影・編集を、プロの手でまとめて形にします。</p>
+        <div class="service-tags">
+          <span class="tag">企画・構成</span>
+          <span class="tag">撮影</span>
+          <span class="tag">編集</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-thumb"><img src="img/service_biz.png" alt="企業コンサルティング"></div>
+        <div class="service-index">03 / BIZ</div>
+        <h3 class="service-h3">企業コンサルティング</h3>
+        <p class="service-p">発信戦略から組織づくりまで。会社の「伝わる」を、その場限りでなく仕組みとして根づかせます。</p>
+        <div class="service-tags">
+          <span class="tag">戦略設計</span>
+          <span class="tag">ブランディング</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-thumb"><img src="img/service_personal.png" alt="個人コンサルティング"></div>
+        <div class="service-index">04 / PERSONAL</div>
+        <h3 class="service-h3">個人コンサルティング</h3>
+        <p class="service-p">発信者や起業を考えている方へ。あなたらしい発信の"育て方"を、二人三脚で見つけていきます。</p>
+        <div class="service-tags">
+          <span class="tag">パーソナル戦略</span>
+          <span class="tag">伴走支援</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="container">
+    <div class="section-label">
+      <span class="section-label-bar" style="background:var(--ac);"></span>
+      <span class="section-label-text" style="color:var(--ac);">FLOW</span>
+    </div>
+    <h2 class="section-h2">ご相談から、こんな流れで。</h2>
+    <div class="flow-grid">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <h3 class="flow-h3">お問い合わせ</h3>
+        <p class="flow-p">まずは気軽にご連絡を。フォームから30秒でOKです。</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <h3 class="flow-h3">ヒアリング</h3>
+        <p class="flow-p">目標や課題、今の発信状況をじっくりお聞きします。</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <h3 class="flow-h3">ご提案・お見積り</h3>
+        <p class="flow-p">ぴったりのプランと費用感を、わかりやすくご提示します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <h3 class="flow-h3">制作・運用スタート</h3>
+        <p class="flow-p">二人三脚で、発信を着実に形にしていきます。</p>
+      </div>
+      <div class="flow-step accent2">
+        <div class="flow-num">05</div>
+        <h3 class="flow-h3">振り返り・改善</h3>
+        <p class="flow-p">数字を見ながら、もっと伝わる形へ磨き続けます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section id="company">
+  <div class="container">
+    <div class="section-label">
+      <span class="section-label-bar" style="background:var(--ac);"></span>
+      <span class="section-label-text" style="color:var(--ac);">COMPANY</span>
+    </div>
+    <h2 class="section-h2" style="margin-bottom:50px;">会社概要</h2>
+    <div class="company-inner">
+      <div class="company-table">
+        <div class="company-row">
+          <div class="company-row-label">企業名</div>
+          <div class="company-row-val">4K株式会社<span>（ヨンケー）</span></div>
+        </div>
+        <div class="company-row">
+          <div class="company-row-label">所在地</div>
+          <div class="company-row-val">〒812-0044<br>福岡県福岡市博多区千代3丁目34番1号</div>
+        </div>
+        <div class="company-row">
+          <div class="company-row-label">事業内容</div>
+          <div class="company-row-val">SNS運用代行 / 動画制作・編集 /<br>企業・個人コンサルティング</div>
+        </div>
+        <div class="company-row">
+          <div class="company-row-label">代表取締役</div>
+          <div class="company-row-val">多賀谷兵馬</div>
+        </div>
+      </div>
+      <div class="company-map">
+        <iframe
+          src="https://maps.google.com/maps?q=福岡県福岡市博多区千代3丁目34番1号&z=16&output=embed"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="4K株式会社 所在地マップ">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESIDENT PROFILE -->
+<section id="president">
+  <div class="container">
+    <div class="president-inner">
+      <div class="president-copy">
+        <div class="section-label">
+          <span class="section-label-bar" style="background:var(--ac);"></span>
+          <span class="section-label-text" style="color:var(--ac);">REPRESENTATIVE</span>
+        </div>
+        <p class="president-title-label">代表取締役</p>
+        <h2 class="president-name">多賀谷兵馬</h2>
+        <p class="president-msg">「発信が、人を動かす。」そう信じて、SNS・動画・コンサルを一気通貫で提供してきました。スピード感と熱量、そして戦略。4K株式会社は、あなたのブランドをもっと遠くへ届けるために、いつでも全力で隣にいます。</p>
+      </div>
+      <div class="president-photo-wrap">
+        <img src="img/president.jpg" alt="代表取締役 多賀谷兵馬">
+        <div class="president-photo-badge">
+          代表取締役<br>多賀谷&nbsp;兵馬
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div class="section-label">
+      <span class="section-label-bar" style="background:var(--ac2);"></span>
+      <span class="section-label-text" style="color:var(--ac2);">FAQ</span>
+    </div>
+    <h2 class="section-h2" style="margin-bottom:48px;">よくある質問</h2>
+
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        <span class="faq-q">SNSのアカウントがまだ無くても大丈夫？</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p class="faq-a">もちろんです。アカウントの開設からコンセプト設計、プロフィールづくりまで丸ごとサポートします。ゼロからでも安心してお任せください。</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        <span class="faq-q">動画だけ、運用だけの依頼もできる？</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p class="faq-a">はい、もちろんです。必要な部分だけのご依頼も大歓迎です。まずはやりたいことをお聞かせください。</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        <span class="faq-q">個人でも相談できる？</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p class="faq-a">はい。個人の発信者の方や、これから起業を考えている方からのご相談も多くいただいています。お気軽にどうぞ。</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        <span class="faq-q">福岡以外でも対応してる？</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p class="faq-a">オンラインで全国対応しています。打ち合わせもオンラインで完結できますので、エリアを問わずご相談ください。</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        <span class="faq-q">料金はどのくらい？</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p class="faq-a">内容や規模によって変わるため、ヒアリングのうえお見積りします。ご相談・お見積りは無料ですので、まずはお気軽にどうぞ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section id="contact">
+  <div class="contact-glow-1"></div>
+  <div class="contact-glow-2"></div>
+  <div class="contact-inner">
+    <p class="contact-eyebrow">LET'S START</p>
+    <h2 class="contact-h2">さあ、発信を始めよう。</h2>
+    <p class="contact-lead">あなたのブランドの"次"を、いっしょに。ご相談・お見積りはいつでも無料です。気軽に声をかけてください。</p>
+    <a href="mailto:" class="btn-dark">お問い合わせはこちら →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="footer-logo-mark">4K</span>
+          <span class="footer-logo-sub">株式会社</span>
+        </div>
+        <p class="footer-tagline">発信のチカラで、あなたのブランドをもっと遠くへ。SNS運用・動画制作・コンサルティング。</p>
+      </div>
+      <div>
+        <div class="footer-col-label">SERVICE</div>
+        <div class="footer-links">
+          <a href="#services" class="footer-link">SNS運用代行</a>
+          <a href="#services" class="footer-link">動画制作・編集</a>
+          <a href="#services" class="footer-link">企業コンサルティング</a>
+          <a href="#services" class="footer-link">個人コンサルティング</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-label">ADDRESS</div>
+        <p class="footer-address">〒812-0044<br>福岡県福岡市博多区<br>千代3丁目34番1号</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 4K Inc. All rights reserved.</span>
+      <a href="#top" class="back-top">ページトップへ ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileNav  = document.getElementById('mobileNav');
+  menuToggle.addEventListener('click', () => {
+    const open = menuToggle.classList.toggle('open');
+    mobileNav.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menuToggle.classList.remove('open');
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = body.classList.contains('open');
+
+      document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.faq-icon').forEach(i => { i.style.transform = 'rotate(0deg)'; });
+      document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+      if (!isOpen) {
+        body.classList.add('open');
+        icon.style.transform = 'rotate(45deg)';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+</body>
+</html>
